@@ -1,0 +1,13 @@
+{
+    "entry": "ExcelDataAdapter.exe",
+    "name": "ExcelData",
+    "app_id": "ExcelDataAdapter",
+    "out_types": [
+        "timeseries"
+    ],
+    "single_meas": true,
+    "multi_meas": false,
+    "quality_option": false,
+    "is_meas_picker_present": true,
+    "is_adapter_config_ui_present": false
+}

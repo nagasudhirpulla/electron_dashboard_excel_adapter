@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelDataAdapter", "ExcelDataAdapter\ExcelDataAdapter.csproj", "{3BE7139B-67DC-4898-9264-C15B1E742D8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterUtils", "AdapterUtils\AdapterUtils.csproj", "{88B32308-2DDE-44EF-9F1E-FFF1FE302C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BE7139B-67DC-4898-9264-C15B1E742D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE7139B-67DC-4898-9264-C15B1E742D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE7139B-67DC-4898-9264-C15B1E742D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE7139B-67DC-4898-9264-C15B1E742D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B32308-2DDE-44EF-9F1E-FFF1FE302C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B32308-2DDE-44EF-9F1E-FFF1FE302C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B32308-2DDE-44EF-9F1E-FFF1FE302C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B32308-2DDE-44EF-9F1E-FFF1FE302C30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01FCD1B6-8983-4A73-A04C-E09FF4016D3A}
+	EndGlobalSection
+EndGlobal

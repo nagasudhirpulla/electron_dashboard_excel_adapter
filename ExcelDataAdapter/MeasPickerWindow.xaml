@@ -1,0 +1,46 @@
+﻿<Window x:Class="ExcelDataAdapter.MeasPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExcelDataAdapter"
+        mc:Ignorable="d"
+        Title="Measurement Picker" Height="450" Width="800">
+    <ScrollViewer Margin="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid Margin="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Pick a column from Excel file" FontWeight="Bold"></Label>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Label Content="Excel File - "></Label>
+                <TextBox x:Name="ExcelFilenameTextBox" MinWidth="150"></TextBox>
+                <Button x:Name="OpenExcelFilenameBtn" Click="OpenExcelFilenameBtn_Click" Content="Browse"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <Label Content="Sheet name - "></Label>
+                <ComboBox x:Name="SheetNamesComboBox" SelectionChanged="SheetNamesComboBox_SelectionChanged" MinWidth="50"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <Label Content="Time Column - "></Label>
+                <ComboBox x:Name="TimeColumnNamesComboBox" MinWidth="50"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="4">
+                <Label Content="Data Column - "></Label>
+                <ComboBox x:Name="DataColumnNamesComboBox" MinWidth="50"></ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                <Button Content="OK" Click="OK_Click" Padding="8" Margin="8"></Button>
+                <Button Content="Cancel" Click="Cancel_Click" Padding="8" Margin="8"></Button>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
