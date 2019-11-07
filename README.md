@@ -9,3 +9,8 @@ The folder *ExcelDataAdapterPluginFiles* can be added to electron dashboard data
 It is created by copying the contents of bin/Debug folder into a folder and adding manifest.json file to it.
 
 This data adapter is made using WPF.
+
+<br/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nagasudhirpulla/electron_dashboard_excel_adapter/master/assets/img/excel_data_adapter_poster.png">
+</p>
