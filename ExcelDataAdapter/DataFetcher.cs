@@ -65,16 +65,33 @@ namespace ExcelDataAdapter
             {
                 var timeCell = sheet.Cells[rowIter, measTimeColInd];
                 var valCell = sheet.Cells[rowIter, measDataColInd];
-                // check if cell type is time
+                DateTime? cellDateTime = null;
+
                 if (timeCell.Value is DateTime valTime)
                 {
+                    // check if cell type is time
                     // we need to convert data time to utc time before comparing
                     if ((valTime.ToUniversalTime() >= startTime) && (valTime.ToUniversalTime() <= endTime))
                     {
-                        fetchResult.Add(TimeUtils.ToMillisSinceUnixEpoch(valTime));
-                        // check if we have a numeric value in the data column
-                        fetchResult.Add((valCell.Value is double) ? valCell.Value : null);
+                        cellDateTime = valTime;
                     }
+                }
+                else if (timeCell.Value is double oaDouble)
+                {
+                    // check if cell type is double
+                    DateTime cellOaTime = DateTime.FromOADate(oaDouble);
+                    // we need to convert data time to utc time before comparing
+                    if ((cellOaTime.ToUniversalTime() >= startTime) && (cellOaTime.ToUniversalTime() <= endTime))
+                    {
+                        cellDateTime = cellOaTime;
+                    }
+                }
+
+                if (cellDateTime.HasValue)
+                {
+                    fetchResult.Add(TimeUtils.ToMillisSinceUnixEpoch(cellDateTime.Value));
+                    // check if we have a numeric value in the data column
+                    fetchResult.Add((valCell.Value is double) ? valCell.Value : null);
                 }
             }
             outStr = String.Join(",", fetchResult);
